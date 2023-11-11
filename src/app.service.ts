@@ -5,8 +5,10 @@ import { env } from 'process';
 export class AppService {
   getHello() {
     return {
-      name: 'gcp-test-root',
-      port: env.APP_PORT
+      action: "health-check",
+      serviceName: 'gcp-root',
+      port: env.APP_PORT,
+      env: env.APP_ENV
     }
   }
 }
